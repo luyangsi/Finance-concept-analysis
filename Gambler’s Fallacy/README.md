@@ -71,3 +71,7 @@ To run this project on your machine, follow these steps:
 -   **Hot Hand Fallacy**: Betting with a streak because it's "on a roll."
 -   **Escalation of Commitment**: Increasing bet sizes after losses to "chase" points.
 -   **Overconfidence**: High betting on low-probability outcomes.
+
+## Simulator Interface
+<img width="1099" height="873" alt="截屏2026-01-22 下午3 36 45" src="https://github.com/user-attachments/assets/c5b15a97-c7ef-4b41-a234-9f3b95857643" />
+
