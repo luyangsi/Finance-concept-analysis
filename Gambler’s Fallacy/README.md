@@ -32,7 +32,7 @@ To run this project on your machine, follow these steps:
 
 1.  **Clone the repository**:
     ```bash
-    git clone <your-repo-url>
+    git clone https://github.com/luyangsi/Finance-concept-analysis.git
     cd probability-pilot
     ```
 
