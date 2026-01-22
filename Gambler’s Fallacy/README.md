@@ -1,20 +1,73 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🎲 Probability Pilot
 
-# Run and deploy your AI Studio app
+**Probability Pilot** is a high-fidelity interactive experiment designed to surface and analyze classic cognitive biases in human decision-making. By engaging in repeated games of chance, users can visualize how their intuition—often flawed by perceived patterns—clashes with the cold reality of randomness.
 
-This contains everything you need to run your app locally.
+## 🧠 Mechanics
 
-View your app in AI Studio: https://ai.studio/apps/drive/12nz8xKtoLAjfZGEIXtMSy_YcwZ5nvs8j
+The application captures the gap between belief and action through a simple three-step loop:
 
-## Run Locally
+1.  **Prediction**: Before each outcome, users answer: *“What do you think happens next?”* (e.g., Heads vs. Tails).
+2.  **Confidence & Bet**: Users quantify their intuition: *“How strongly would you bet on it?”* by adjusting confidence levels (0–100%) and wagering virtual points.
+3.  **Outcome & Analysis**: The app logs streak lengths, prediction accuracy, and betting sizing to identify patterns like the **Gambler's Fallacy** or **Hot Hand Fallacy**.
 
-**Prerequisites:**  Node.js
+## 🚀 Key Features
 
+-   **Dual Modes**: Switch between binary **Coin Flips** and 1-in-6 **Dice Rolls**.
+-   **AI Bias Lab**: Uses the **Gemini 3 Flash** model to analyze your last 5+ rounds and provide a scientific breakdown of your specific cognitive patterns.
+-   **Live Analytics**: A dynamic trend chart (powered by `Recharts`) overlays your confidence against your bet sizing over time.
+-   **Streak Tracking**: Real-time detection of outcome streaks to test if you believe "tails is due" after many heads.
+-   **Responsive Glassmorphism UI**: A sleek, dark-themed interface built with Tailwind CSS and Lucide icons.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠️ Technical Stack
+
+-   **Frontend**: React 19 + TypeScript
+-   **AI Engine**: [Google Gemini API](https://ai.google.dev/) (`gemini-3-flash-preview`)
+-   **Styling**: Tailwind CSS
+-   **Visuals**: Recharts (Analytics) & Lucide (Icons)
+-   **Build Tool**: Vite
+
+## 💻 Local Setup & Installation
+
+To run this project on your machine, follow these steps:
+
+1.  **Clone the repository**:
+    ```bash
+    git clone <your-repo-url>
+    cd probability-pilot
+    ```
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Configure Environment Variables**:
+    Create a `.env` file in the root directory and add your Gemini API Key:
+    ```env
+    VITE_API_KEY=your_gemini_api_key_here
+    ```
+    *Note: The `vite.config.ts` is configured to map `VITE_API_KEY` to `process.env.API_KEY` for the application logic.*
+
+4.  **Run in Development Mode**:
+    ```bash
+    npm run dev
+    ```
+
+5.  **Build for Production**:
+    ```bash
+    npm run build
+    ```
+
+## 📂 Project Structure
+
+-   `App.tsx`: Main application logic and UI layout.
+-   `services/geminiService.ts`: Integration with the Google GenAI SDK for bias analysis.
+-   `types.ts`: Shared TypeScript interfaces for game rounds and statistics.
+-   `vite.config.ts`: Configured to inject environment variables into the client-side code.
+
+## ⚖️ Analyzed Biases
+
+-   **Gambler's Fallacy**: Betting against a streak because it's "due" to change.
+-   **Hot Hand Fallacy**: Betting with a streak because it's "on a roll."
+-   **Escalation of Commitment**: Increasing bet sizes after losses to "chase" points.
+-   **Overconfidence**: High betting on low-probability outcomes.
