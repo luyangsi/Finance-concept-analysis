@@ -63,5 +63,9 @@ npx serve .
 
 *Note: Since the project uses `.tsx` files, a build step (like the one provided by Vite) is required to convert the code to standard JavaScript for the browser.*
 
+## Simulator Interface
+<img width="2822" height="1196" alt="截屏2026-01-22 下午6 54 03" src="https://github.com/user-attachments/assets/67712ced-eed7-4354-8d8f-fc4bac91258b" />
+
+
 ---
 *Created with focus on financial literacy and experience-based learning.*
