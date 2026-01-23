@@ -1,0 +1,5 @@
+{
+  "name": "LifeWealth Simulator",
+  "description": "An interactive financial planning game where you manage a 40-year career, balancing consumption and investment while navigating market shocks and wage growth.",
+  "requestFramePermissions": []
+}
